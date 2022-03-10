@@ -34,3 +34,4 @@ lis = list(range(10000000))
 check = 3890000
 print(linear_search(lis,check))
 print(binary_search(lis,check))
+

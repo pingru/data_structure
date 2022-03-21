@@ -24,4 +24,4 @@ def hanoi(n, a, b, c):
 
 # 汉诺塔函数调用,传入具体参数:
 i = 0
-hanoi(1, 'A', 'B', 'C')
+hanoi(3, 'A', 'B', 'C')

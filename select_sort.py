@@ -22,4 +22,24 @@ def select_sort(lis):
 
 
 lis = [3, 2, 4, 1, 5, 6, 8, 7, 9]
-print(select_sort(lis))
+
+
+# print(select_sort(lis))
+
+# 2.优化版本的选择排序
+# 代码关键点是,有序区,无序区,最小数的位置
+def select_sort_pro(lis):
+    for i in range(len(lis) - 1):  # 遍历次数是列表长度减一
+        min_loc = i
+        change_flag = False
+        for j in range((i + 1), len(lis)):
+            if lis[j] < lis[min_loc]:
+                lis[j], lis[min_loc] = lis[min_loc], lis[j]
+                change_flag = True
+        if not change_flag:
+            break
+        print(lis)
+
+
+lis = [3, 2, 4, 1, 5, 6, 8, 7, 9]
+print(select_sort_pro(lis))

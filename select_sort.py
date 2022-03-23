@@ -31,15 +31,13 @@ lis = [3, 2, 4, 1, 5, 6, 8, 7, 9]
 def select_sort_pro(lis):
     for i in range(len(lis) - 1):  # 遍历次数是列表长度减一
         min_loc = i
-        change_flag = False
         for j in range((i + 1), len(lis)):
             if lis[j] < lis[min_loc]:
                 lis[j], lis[min_loc] = lis[min_loc], lis[j]
-                change_flag = True
-        if not change_flag:
-            break
         print(lis)
 
+
+# 选择排序算法,不能加标志位change_flag,因为如果某一次选出来的元素比后面无序区所有元素值都小,那么无序区就不排了
 
 lis = [3, 2, 4, 1, 5, 6, 8, 7, 9]
 print(select_sort_pro(lis))

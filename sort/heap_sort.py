@@ -29,7 +29,7 @@ def sift(lis, low, high):  # 树用顺序存储方式，即用列表存储，low
 def heap_sort(lis):
     n = len(lis)
     # 创建堆
-    for i in range((n - 1) // 2, -1, -1):
+    for i in range((n - 2) // 2, -1, -1):
         sift(lis, i, n - 1)  # high传n-1，因为不越界就行
     # 一个一个出数
     for i in range(n - 1, -1, -1):
